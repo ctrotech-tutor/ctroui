@@ -115,13 +115,20 @@
       "import": "./dist/multi-select/index.js",
       "require": "./dist/multi-select/index.cjs"
     },
-    "./styles": "./globals.css"
+    "./styles": "./globals.css",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist",
     "globals.css"
   ],
-  "sideEffects": false,
+  "sideEffects": ["./globals.css"],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -131,7 +138,9 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/",
-    "format": "biome format --write src/"
+    "format": "biome format --write src/",
+    "prepublishOnly": "npm run build && npm run test",
+    "prepare": "npm run build"
   },
   "keywords": [
     "react",
@@ -147,7 +156,7 @@
     "typescript",
     "ctroui"
   ],
-  "author": "anomalyco",
+  "author": "ctrotech",
   "license": "MIT",
   "dependencies": {
     "class-variance-authority": "^0.7.1",
