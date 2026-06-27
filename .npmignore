@@ -1,0 +1,12 @@
+src/
+tests/
+node_modules/
+.git/
+.github/
+*.tsbuildinfo
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+biome.json
+AGENTS.md
+plans/

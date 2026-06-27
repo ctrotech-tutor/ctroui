@@ -1,0 +1,180 @@
+{
+  "name": "ctroui",
+  "version": "0.1.0",
+  "description": "React UI library built on Radix UI + Tailwind CSS — accessible, composable, themeable components for modern React apps",
+  "homepage": "https://ctroui.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctrotech-tutor/ctroui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ctrotech-tutor/ctroui/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./button": {
+      "types": "./dist/button/index.d.ts",
+      "import": "./dist/button/index.js",
+      "require": "./dist/button/index.cjs"
+    },
+    "./badge": {
+      "types": "./dist/badge/index.d.ts",
+      "import": "./dist/badge/index.js",
+      "require": "./dist/badge/index.cjs"
+    },
+    "./input": {
+      "types": "./dist/input/index.d.ts",
+      "import": "./dist/input/index.js",
+      "require": "./dist/input/index.cjs"
+    },
+    "./label": {
+      "types": "./dist/label/index.d.ts",
+      "import": "./dist/label/index.js",
+      "require": "./dist/label/index.cjs"
+    },
+    "./card": {
+      "types": "./dist/card/index.d.ts",
+      "import": "./dist/card/index.js",
+      "require": "./dist/card/index.cjs"
+    },
+    "./dialog": {
+      "types": "./dist/dialog/index.d.ts",
+      "import": "./dist/dialog/index.js",
+      "require": "./dist/dialog/index.cjs"
+    },
+    "./dropdown-menu": {
+      "types": "./dist/dropdown-menu/index.d.ts",
+      "import": "./dist/dropdown-menu/index.js",
+      "require": "./dist/dropdown-menu/index.cjs"
+    },
+    "./popover": {
+      "types": "./dist/popover/index.d.ts",
+      "import": "./dist/popover/index.js",
+      "require": "./dist/popover/index.cjs"
+    },
+    "./select": {
+      "types": "./dist/select/index.d.ts",
+      "import": "./dist/select/index.js",
+      "require": "./dist/select/index.cjs"
+    },
+    "./separator": {
+      "types": "./dist/separator/index.d.ts",
+      "import": "./dist/separator/index.js",
+      "require": "./dist/separator/index.cjs"
+    },
+    "./skeleton": {
+      "types": "./dist/skeleton/index.d.ts",
+      "import": "./dist/skeleton/index.js",
+      "require": "./dist/skeleton/index.cjs"
+    },
+    "./switch": {
+      "types": "./dist/switch/index.d.ts",
+      "import": "./dist/switch/index.js",
+      "require": "./dist/switch/index.cjs"
+    },
+    "./tabs": {
+      "types": "./dist/tabs/index.d.ts",
+      "import": "./dist/tabs/index.js",
+      "require": "./dist/tabs/index.cjs"
+    },
+    "./tooltip": {
+      "types": "./dist/tooltip/index.d.ts",
+      "import": "./dist/tooltip/index.js",
+      "require": "./dist/tooltip/index.cjs"
+    },
+    "./confirm-dialog": {
+      "types": "./dist/confirm-dialog/index.d.ts",
+      "import": "./dist/confirm-dialog/index.js",
+      "require": "./dist/confirm-dialog/index.cjs"
+    },
+    "./form-field": {
+      "types": "./dist/form-field/index.d.ts",
+      "import": "./dist/form-field/index.js",
+      "require": "./dist/form-field/index.cjs"
+    },
+    "./data-table": {
+      "types": "./dist/data-table/index.d.ts",
+      "import": "./dist/data-table/index.js",
+      "require": "./dist/data-table/index.cjs"
+    },
+    "./command-palette": {
+      "types": "./dist/command-palette/index.d.ts",
+      "import": "./dist/command-palette/index.js",
+      "require": "./dist/command-palette/index.cjs"
+    },
+    "./multi-select": {
+      "types": "./dist/multi-select/index.d.ts",
+      "import": "./dist/multi-select/index.js",
+      "require": "./dist/multi-select/index.cjs"
+    },
+    "./styles": "./globals.css"
+  },
+  "files": [
+    "dist",
+    "globals.css"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "format": "biome format --write src/"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "radix-ui",
+    "tailwindcss",
+    "accessible",
+    "react-components",
+    "design-system",
+    "headless-ui",
+    "shadcn",
+    "typescript",
+    "ctroui"
+  ],
+  "author": "anomalyco",
+  "license": "MIT",
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.21.0",
+    "radix-ui": "^1.6.0",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^29.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^4.3.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "peerDependencies": {
+    "react": "^18.0 || ^19.0",
+    "react-dom": "^18.0 || ^19.0",
+    "tailwindcss": "^3.4 || ^4.0"
+  }
+}
