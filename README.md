@@ -6,12 +6,13 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Bundle](https://img.shields.io/badge/bundle-esm%20%7C%20cjs%20%7C%20dts-facc15?style=flat-square)](https://github.com/ctrotech-tutor/ctroui)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-16a34a?style=flat-square)](https://github.com/ctrotech-tutor/ctroui)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-> **Accessible. Composable. Themeable.** — A React UI library built on [Radix UI](https://radix-ui.com) + [Tailwind CSS](https://tailwindcss.com) with 60+ components matching [shadcn/ui](https://ui.shadcn.com) v4 (New York style).
+> **Accessible. Composable. Themeable.** A React UI library built on [Radix UI](https://radix-ui.com) + [Tailwind CSS](https://tailwindcss.com) with 60+ components matching [shadcn/ui](https://ui.shadcn.com) v4 (New York style).
 
 ---
 
-## ✨ Features
+## Features
 
 - **60+ components** — buttons, dialogs, forms, data display, navigation, charts, sidebar, and more
 - **Accessible by default** — built on Radix UI primitives with full ARIA support
@@ -22,7 +23,7 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install ctroui
@@ -61,7 +62,7 @@ Then add the CSS variables to your `:root`:
 
 ---
 
-## 🎨 Theming
+## Theming
 
 Override CSS variables for a custom theme:
 
@@ -79,7 +80,7 @@ Override CSS variables for a custom theme:
 
 ---
 
-## 🧩 Components
+## Components
 
 ### Core UI
 
@@ -191,7 +192,7 @@ Override CSS variables for a custom theme:
 
 ---
 
-## 📥 Import Patterns
+## Import Patterns
 
 ```tsx
 // Barrel import (tree-shakeable)
@@ -206,7 +207,7 @@ import { SidebarProvider, Sidebar, SidebarTrigger } from "ctroui/sidebar"
 
 ---
 
-## ⚡ Development
+## Development
 
 ```bash
 # Install
@@ -230,7 +231,7 @@ npm run dev
 
 ---
 
-## 📊 Bundle Size
+## Bundle Size
 
 Each component is built as its own entry point (ESM + CJS + DTS). Import only what you need — unused components are tree-shaken away by modern bundlers.
 
@@ -243,7 +244,7 @@ Each component is built as its own entry point (ESM + CJS + DTS). Import only wh
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 PRs are welcome! If you find a bug or want a new component:
 
@@ -255,6 +256,6 @@ PRs are welcome! If you find a bug or want a new component:
 
 ---
 
-## 📄 License
+## License
 
 MIT &copy; [ctrotech](https://github.com/ctrotech-tutor)
