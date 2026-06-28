@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/ctrotech-tutor/ctroui/compare/v0.2.0...v0.3.0) (2026-06-28)
+
+
+### Features
+
+* VitePress documentation site with Vercel deployment ([8162439](https://github.com/ctrotech-tutor/ctroui/commit/81624398a83604c6cca390c1dd819af4f8707c03))
+
 # [0.2.0](https://github.com/ctrotech-tutor/ctroui/compare/v0.1.0...v0.2.0) (2026-06-28)
 
 
