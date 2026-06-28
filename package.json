@@ -1,6 +1,6 @@
 {
   "name": "ctroui",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "description": "React UI library built on Radix UI + Tailwind CSS — accessible, composable, themeable components for modern React apps",
   "homepage": "https://ctroui.vercel.app",
   "repository": {
