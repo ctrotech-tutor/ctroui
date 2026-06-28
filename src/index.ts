@@ -29,7 +29,7 @@ export {
   AvatarGroupCount,
   AvatarImage,
 } from "./avatar"
-export { Badge, type BadgeProps } from "./badge"
+export { Badge } from "./badge"
 export {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -39,7 +39,7 @@ export {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "./breadcrumb"
-export { Button, type ButtonProps } from "./button"
+export { Button, buttonVariants } from "./button"
 export {
   ButtonGroup,
   ButtonGroupSeparator,
@@ -49,11 +49,11 @@ export {
 export { Calendar, CalendarDayButton } from "./calendar"
 export {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  type CardProps,
   CardTitle,
 } from "./card"
 export {
@@ -168,9 +168,19 @@ export {
   FieldSet,
   FieldTitle,
 } from "./field"
-export { FormField, type FormFieldProps } from "./form-field"
+export {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  useFormField,
+} from "./form"
+export { type FormFieldProps, FormField as LegacyFormField } from "./form-field"
 export { HoverCard, HoverCardContent, HoverCardTrigger } from "./hover-card"
-export { Input, type InputProps } from "./input"
+export { Input } from "./input"
 export {
   InputGroup,
   InputGroupAddon,
@@ -193,7 +203,7 @@ export {
   ItemTitle,
 } from "./item"
 export { Kbd, KbdGroup } from "./kbd"
-export { Label, type LabelProps } from "./label"
+export { Label } from "./label"
 export { cn } from "./lib/utils"
 export {
   Menubar,
@@ -243,7 +253,15 @@ export {
   PaginationNext,
   PaginationPrevious,
 } from "./pagination"
-export { Popover, PopoverClose, PopoverContent, PopoverTrigger } from "./popover"
+export {
+  Popover,
+  PopoverAnchor,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "./popover"
 export { Progress } from "./progress"
 export { RadioGroup, RadioGroupItem } from "./radio-group"
 export { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./resizable"
@@ -254,6 +272,8 @@ export {
   SelectGroup,
   SelectItem,
   SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
   SelectSeparator,
   SelectTrigger,
   SelectValue,
@@ -295,7 +315,7 @@ export {
   SidebarTrigger,
   useSidebar,
 } from "./sidebar"
-export { Skeleton, type SkeletonProps } from "./skeleton"
+export { Skeleton } from "./skeleton"
 export { Slider } from "./slider"
 export { Toaster } from "./sonner"
 export { Spinner } from "./spinner"
@@ -310,7 +330,7 @@ export {
   TableHeader,
   TableRow,
 } from "./table"
-export { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs"
+export { Tabs, TabsContent, TabsList, TabsTrigger, tabsListVariants } from "./tabs"
 export { Textarea } from "./textarea"
 export { Toggle, toggleVariants } from "./toggle"
 export { ToggleGroup, ToggleGroupItem } from "./toggle-group"

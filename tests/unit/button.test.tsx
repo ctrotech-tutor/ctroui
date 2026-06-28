@@ -24,7 +24,7 @@ describe("Button", () => {
   it("applies size classes", () => {
     render(<Button size="sm">Small</Button>)
     const button = screen.getByRole("button", { name: /small/i })
-    expect(button.className).toContain("h-9")
+    expect(button.className).toContain("h-8")
   })
 
   it("merges className prop", () => {

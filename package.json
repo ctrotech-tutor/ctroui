@@ -1,6 +1,6 @@
 {
   "name": "ctroui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React UI library built on Radix UI + Tailwind CSS — accessible, composable, themeable components for modern React apps",
   "homepage": "https://ctroui.vercel.app",
   "repository": {
@@ -184,6 +184,11 @@
       "types": "./dist/confirm-dialog/index.d.ts",
       "import": "./dist/confirm-dialog/index.js",
       "require": "./dist/confirm-dialog/index.cjs"
+    },
+    "./form": {
+      "types": "./dist/form/index.d.ts",
+      "import": "./dist/form/index.js",
+      "require": "./dist/form/index.cjs"
     },
     "./form-field": {
       "types": "./dist/form-field/index.d.ts",
@@ -370,9 +375,7 @@
     "lucide-react": "^1.21.0",
     "radix-ui": "^1.6.0",
     "react-day-picker": "^10.0.1",
-    "react-resizable-panels": "^2.1.7",
-    "recharts": "^2.15.3",
-    "react-day-picker": "^10.0.1",
+    "react-hook-form": "^7.80.0",
     "react-resizable-panels": "^4.11.2",
     "recharts": "^3.9.0",
     "sonner": "^2.0.7",
