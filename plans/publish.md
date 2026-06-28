@@ -113,6 +113,42 @@ Then create a release on GitHub from the tag with release notes summarizing chan
 
 Deploy the documentation site to https://ctroui.vercel.app
 
+## Trusted Publishing (CI/CD)
+
+This repo is configured for **npm Trusted Publishing with OIDC** — no long-lived npm tokens required.
+
+### Setup (one-time)
+
+Since you've already run the first `npm publish` manually, the package exists on npm and you can now configure the Trusted Publisher:
+
+1. Go to https://www.npmjs.com/settings/ctrotech-tutor/packages
+2. Select `ctroui` → "Access" → "Publishers" tab
+3. Click "Add Publisher" and configure:
+   - **Provider**: GitHub
+   - **Repository**: `ctrotech-tutor/ctroui`
+   - **Workflow**: `.github/workflows/publish.yml`
+4. Save
+
+### Publishing a new version
+
+1. Create a version tag and push:
+
+   ```bash
+   git tag v0.2.0
+   git push origin v0.2.0
+   ```
+
+2. The workflow in `.github/workflows/publish.yml` will automatically:
+   - Build and test
+   - Publish to npm with `--provenance` (cryptographic source attestation)
+   - No manual `npm publish` needed after setup
+
+### Requirements
+
+- Uses `ubuntu-latest` (GitHub-hosted — OIDC requires it)
+- Node 24 (npm 11.5.1+ for provenance support)
+- No `NODE_AUTH_TOKEN` set in the workflow (would block OIDC)
+
 ## Version History
 
 | Version | Date | Notes |
