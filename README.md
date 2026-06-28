@@ -64,9 +64,17 @@ Then add the CSS variables to your `:root`:
 
 ## Theming
 
-Override CSS variables for a custom theme:
+ctroui uses CSS variables for theming — you have full control over the color palette. Override any variable in your own CSS to customize the look.
+
+All colors use the `oklch()` color space for perceptual uniformity.
+
+### How It Works
+
+Import `ctroui/styles` to get the base CSS variables, then override them in your own stylesheet:
 
 ```css
+@import "ctroui/styles";
+
 :root {
   --primary: oklch(0.546 0.245 262.881);
   --radius: 0.5rem;
@@ -78,7 +86,228 @@ Override CSS variables for a custom theme:
 }
 ```
 
----
+### Theme Presets
+
+ctroui ships with a **neutral** default theme (above). You can switch to any of these popular shadcn-compatible presets by copying the values into your CSS.
+
+<details>
+<summary><b>Zinc</b> — cool, modern grays</summary>
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: oklch(0.141 0.005 285.823);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.141 0.005 285.823);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.141 0.005 285.823);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.004 286.375);
+  --input: oklch(0.92 0.004 286.375);
+  --ring: oklch(0.705 0.015 286.067);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.141 0.005 285.823);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.141 0.005 285.823);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.274 0.006 286.033);
+  --input: oklch(0.274 0.006 286.033);
+  --ring: oklch(0.442 0.017 285.786);
+}
+```
+</details>
+
+<details>
+<summary><b>Slate</b> — blue-leaning grays</summary>
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.129 0.042 264.695);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.129 0.042 264.695);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.129 0.042 264.695);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.129 0.042 264.695);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.984 0.003 247.858);
+  --primary-foreground: oklch(0.129 0.042 264.695);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.279 0.041 260.031);
+  --input: oklch(0.279 0.041 260.031);
+  --ring: oklch(0.447 0.043 257.281);
+}
+```
+</details>
+
+<details>
+<summary><b>Gray</b> — balanced, neutral grays</summary>
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.13 0.028 261.692);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0.028 261.692);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0.028 261.692);
+  --primary: oklch(0.13 0.028 261.692);
+  --primary-foreground: oklch(0.985 0.002 247.839);
+  --secondary: oklch(0.967 0.003 264.542);
+  --secondary-foreground: oklch(0.13 0.028 261.692);
+  --muted: oklch(0.967 0.003 264.542);
+  --muted-foreground: oklch(0.551 0.027 264.364);
+  --accent: oklch(0.967 0.003 264.542);
+  --accent-foreground: oklch(0.13 0.028 261.692);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.928 0.006 264.531);
+  --input: oklch(0.928 0.006 264.531);
+  --ring: oklch(0.707 0.022 261.325);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.13 0.028 261.692);
+  --foreground: oklch(0.985 0.002 247.839);
+  --card: oklch(0.13 0.028 261.692);
+  --card-foreground: oklch(0.985 0.002 247.839);
+  --popover: oklch(0.13 0.028 261.692);
+  --popover-foreground: oklch(0.985 0.002 247.839);
+  --primary: oklch(0.985 0.002 247.839);
+  --primary-foreground: oklch(0.13 0.028 261.692);
+  --secondary: oklch(0.273 0.016 285.238);
+  --secondary-foreground: oklch(0.985 0.002 247.839);
+  --muted: oklch(0.273 0.016 285.238);
+  --muted-foreground: oklch(0.707 0.022 261.325);
+  --accent: oklch(0.273 0.016 285.238);
+  --accent-foreground: oklch(0.985 0.002 247.839);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.002 247.839);
+  --border: oklch(0.273 0.016 285.238);
+  --input: oklch(0.273 0.016 285.238);
+  --ring: oklch(0.443 0.014 285.299);
+}
+```
+</details>
+
+<details>
+<summary><b>Stone</b> — warm, earthy grays</summary>
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.147 0.004 49.25);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.147 0.004 49.25);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.147 0.004 49.25);
+  --primary: oklch(0.147 0.004 49.25);
+  --primary-foreground: oklch(0.985 0.001 106.423);
+  --secondary: oklch(0.97 0.001 106.424);
+  --secondary-foreground: oklch(0.147 0.004 49.25);
+  --muted: oklch(0.97 0.001 106.424);
+  --muted-foreground: oklch(0.553 0.013 58.071);
+  --accent: oklch(0.97 0.001 106.424);
+  --accent-foreground: oklch(0.147 0.004 49.25);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.923 0.003 48.717);
+  --input: oklch(0.923 0.003 48.717);
+  --ring: oklch(0.709 0.01 56.259);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.147 0.004 49.25);
+  --foreground: oklch(0.985 0.001 106.423);
+  --card: oklch(0.147 0.004 49.25);
+  --card-foreground: oklch(0.985 0.001 106.423);
+  --popover: oklch(0.147 0.004 49.25);
+  --popover-foreground: oklch(0.985 0.001 106.423);
+  --primary: oklch(0.985 0.001 106.423);
+  --primary-foreground: oklch(0.147 0.004 49.25);
+  --secondary: oklch(0.268 0.007 34.298);
+  --secondary-foreground: oklch(0.985 0.001 106.423);
+  --muted: oklch(0.268 0.007 34.298);
+  --muted-foreground: oklch(0.709 0.01 56.259);
+  --accent: oklch(0.268 0.007 34.298);
+  --accent-foreground: oklch(0.985 0.001 106.423);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0.001 106.423);
+  --border: oklch(0.268 0.007 34.298);
+  --input: oklch(0.268 0.007 34.298);
+  --ring: oklch(0.443 0.011 73.639);
+}
+```
+</details>
+
+<details>
+<summary><b>Red / Blue / Green / Orange / Rose / Violet</b> — colored accent themes</summary>
+
+For accent themes, use the neutral/base grays (e.g. Zinc) and just override the accent colors:
+
+```css
+@import "ctroui/styles";
+
+/* Zinc base + Rose accent */
+:root {
+  --primary: oklch(0.527 0.154 6.143);
+  --ring: oklch(0.527 0.154 6.143);
+}
+```
+</details>
+
+You can also create your own custom theme by replacing the CSS variables with any `oklch()` values.
 
 ## Components
 
